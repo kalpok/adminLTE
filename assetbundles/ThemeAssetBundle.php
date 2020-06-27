@@ -24,7 +24,7 @@ class ThemeAssetBundle extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'core\assetbundles\BootstrapRTLAsset',
-        'core\assetbundles\FontAwesomeRtlAsset'
+        'theme\assetbundles\BootstrapRTLAsset',
+        'theme\assetbundles\FontAwesomeRtlAsset'
     ];
 }

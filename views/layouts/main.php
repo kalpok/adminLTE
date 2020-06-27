@@ -2,15 +2,21 @@
 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use yii\bootstrap\Modal;
 use yii\widgets\Breadcrumbs;
 use theme\widgets\FlashMessages;
 use theme\widgets\AdminSidebarMenu;
 use theme\assetbundles\IEAssetBundle;
+use theme\assetbundles\ModalFormAsset;
+use theme\assetbundles\AjaxButtonsAsset;
 use theme\assetbundles\ThemeAssetBundle;
 use theme\widgets\NotificationsContainer;
 
 ThemeAssetBundle::register($this);
 IEAssetBundle::register($this);
+
+ModalFormAsset::register($this);
+AjaxButtonsAsset::register($this);
 
 ?>
 
@@ -76,6 +82,12 @@ IEAssetBundle::register($this);
                 </section>
                 <section class="content">
                     <?= $content ?>
+                    <?php Modal::begin([
+                        'id' => 'admin-modal',
+                        'clientOptions' => ['backdrop' => true]
+                    ]) ?>
+                        <div class="modal-inner"></div>
+                    <?php Modal::end() ?>
                 </section>
             </div>
             <footer class="main-footer"></footer>
