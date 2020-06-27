@@ -1,0 +1,9 @@
+.skin-purple .sidebar-menu > li > a {
+    border-left: 0;
+    border-right: 5px solid transparent;
+    margin-right: 0;
+    margin-left: 1px;
+}
+.skin-purple .sidebar-menu > li > a:hover, .skin-purple .sidebar-menu > li.active > a {
+    border-right-color: #605ca8;
+}
